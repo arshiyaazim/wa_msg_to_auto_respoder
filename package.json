@@ -1,0 +1,16 @@
+{
+  "name": "al-rifai-cash-standalone-readonly-projection",
+  "version": "0.0.0-staging",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "node --check src/synthetic-data.mjs && node --check src/read-only-cash.mjs && node --check src/server.mjs",
+    "start": "node src/server.mjs",
+    "test": "node --test tests/projection.test.mjs",
+    "test:server": "node --test tests/server.test.mjs",
+    "safety": "node tests/static-safety.mjs"
+  }
+}

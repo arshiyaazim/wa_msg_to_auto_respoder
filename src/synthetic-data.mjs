@@ -1,0 +1,100 @@
+const row = (value) => Object.freeze(value);
+
+export const syntheticRows = Object.freeze([
+  row({
+    id: 'synthetic-wa-001',
+    date: '2026-10-01',
+    time: '09:00:00',
+    employeePhone: '01300000001',
+    payoutPhone: '01700000001',
+    name: 'Synthetic Alpha',
+    amountCents: 125000,
+    method: 'bkash',
+    source: 'WhatsApp live',
+    sourceId: 'synthetic-message-001',
+    sourceLine: 1,
+    sender: 'synthetic-owner',
+    status: 'Posted',
+    purpose: 'Synthetic allowance',
+    issues: [],
+    identityVerified: true
+  }),
+  row({
+    id: 'synthetic-wa-002',
+    date: '2026-10-02',
+    time: '10:30:00',
+    employeePhone: '01300000001',
+    payoutPhone: '01700000002',
+    name: 'Synthetic Alpha Alias',
+    amountCents: 75000,
+    method: 'cash',
+    source: 'WhatsApp live',
+    sourceId: 'synthetic-message-002',
+    sourceLine: 1,
+    sender: 'synthetic-owner',
+    status: 'Instruction',
+    purpose: 'Synthetic food',
+    issues: [],
+    identityVerified: true
+  }),
+  row({
+    id: 'synthetic-manual-001',
+    date: '2026-10-03',
+    time: '11:15:00',
+    employeePhone: '01300000002',
+    payoutPhone: '01700000003',
+    name: 'Synthetic Beta',
+    amountCents: 200000,
+    method: 'bank',
+    source: 'Manual',
+    sourceId: 'synthetic-manual-entry-001',
+    sourceLine: 0,
+    sender: 'synthetic-operator',
+    status: 'Manual record',
+    purpose: 'Synthetic advance',
+    issues: [],
+    identityVerified: true
+  }),
+  row({
+    id: 'synthetic-review-001',
+    date: '2026-10-04',
+    time: '12:00:00',
+    employeePhone: '',
+    payoutPhone: '01700000004',
+    name: 'Synthetic Name Only',
+    amountCents: 50000,
+    method: 'nagad',
+    source: 'Review',
+    sourceId: 'synthetic-review-message-001',
+    sourceLine: 1,
+    sender: 'synthetic-unknown',
+    status: 'Review',
+    purpose: 'Synthetic incomplete candidate',
+    issues: ['EMPLOYEE_ID_REQUIRED'],
+    identityVerified: false
+  }),
+  row({
+    id: 'synthetic-conflict-001',
+    date: '2026-10-05',
+    time: '13:45:00',
+    employeePhone: '01300000003',
+    payoutPhone: '01700000005',
+    name: 'Synthetic Conflict',
+    amountCents: 99000,
+    method: 'rocket',
+    source: 'WhatsApp live',
+    sourceId: 'synthetic-message-conflict',
+    sourceLine: 1,
+    sender: 'synthetic-owner',
+    status: 'Review',
+    purpose: 'Synthetic conflict candidate',
+    issues: ['SOURCE_REPLAY_CONFLICT'],
+    identityVerified: true
+  })
+]);
+
+export const syntheticEvents = Object.freeze([
+  Object.freeze({sourceKey: 'synthetic-message-001|block-0', payloadHash: 'synthetic-payload-a'}),
+  Object.freeze({sourceKey: 'synthetic-message-001|block-0', payloadHash: 'synthetic-payload-a'}),
+  Object.freeze({sourceKey: 'synthetic-message-001|block-0', payloadHash: 'synthetic-payload-b'})
+]);
